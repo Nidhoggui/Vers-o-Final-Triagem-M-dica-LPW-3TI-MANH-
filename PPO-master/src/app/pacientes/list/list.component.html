@@ -1,0 +1,10 @@
+<div class="card mt-2 " *ngFor="let paciente of pacientes| async">
+    <div class="card-body">
+      <h5 class="card-title">{{paciente.nome}}</h5>
+      <p class="card-text">{{paciente.estado}}</p>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-default" (click)="edit(paciente,paciente.key)" routerLink="/edit">Editar</button>
+      <button type="button" class="btn btn-danger mt-2" (click)="delete(paciente.key)">Excluir</button>
+    </div>
+  </div>

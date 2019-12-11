@@ -1,0 +1,16 @@
+<b>Febre</b>
+
+<div class="form-group">
+  <label>Grau Celsius</label>
+    <input type="number" class="form-control" [(ngModel)]="grauFebre" name="peso">
+</div>
+  <label>Febre piorou o estado geral?</label>
+   <div class="custom-control custom-radio"  >
+    <input type="radio" id="radio1" name="customRadio2"  value="true" [(ngModel)]="febrePiorou"class="custom-control-input">
+      <label class="custom-control-label" for="radio1">sim</label>
+   </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="radio2" name="customRadio2" value="false" [(ngModel)]="febrePiorou"  class="custom-control-input">
+        <label class="custom-control-label" for="radio2">não</label>
+    </div>
+<br>

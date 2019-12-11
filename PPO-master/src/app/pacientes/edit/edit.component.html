@@ -1,0 +1,54 @@
+<button class="btn btn-primary mt-1" routerLink="/list">Voltar</button>
+<form (ngSubmit)="onSubmit()">
+  
+  <div class="container mt-5 mb-5">
+    <label><b>Informações Básicas</b></label>
+    <div class="form-group">
+      <label>Nome</label>
+      <input type="text" class="form-control" [(ngModel)]="paciente.nome" name="nome" >
+    </div>
+
+    <div class="form-group">
+      <label>Idade</label>
+      <input type="number" class="form-control" [(ngModel)]="paciente.idade" name="idade">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Estado</label>
+        <select id="inputEstado" class="form-control" [(ngModel)]="paciente.estado" name="estadoGeral">
+          <option value="não urgente" selected >não urgente</option>
+          <option value="pouco urgente">pouco urgente</option>
+          <option value="urgente">urgente</option>
+          <option value="Emergência">Emergência</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Cartão Vacinal</label>
+        <select id="inputCartao" class="form-control" [(ngModel)]="paciente.cartaoVacinal" name="cartaoVacinal">
+          <option value="não urgente"selected >Desatualizado</option>
+          <option value="pouco urgente">Em dia</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Peso</label>
+        <input type="number" class="form-control" [(ngModel)]="paciente.peso" name="peso">
+      </div>
+    
+    </div>
+    <label>Toma leite</label>
+      <div class="custom-control custom-radio"  >
+        <input type="radio" id="radiobutton" name="customRadio"  value="true" [(ngModel)]="paciente.tomaLeite" class="custom-control-input">
+        <label class="custom-control-label" for="radiobutton">sim</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="radiobutton2" name="customRadio" value="false " [(ngModel)]="paciente.tomaLeite" class="custom-control-input">
+        <label class="custom-control-label" for="radiobutton2">não</label>
+      </div>
+      <br>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>
+  
+</form>
+<br>
